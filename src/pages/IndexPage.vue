@@ -1,5 +1,7 @@
 <template>
   <div class=" py-2 h-full flex flex-col items-center bg-gray-100">
+    <!-- GitHub logo -->
+    <VGithubIcon url="https://github.com/UzeG/HCIPaperLib"/>
     <!-- 搜索框 -->
     <div class=" w-96">
       <div class=" w-full flex items-center">
@@ -82,6 +84,7 @@
 <script setup lang="ts">
 import CHILBWData from '@/assets/chi-lbw-2024-a-2.json';
 import { Search, CircleHelp, Box, CheckCheck, Sparkle, Tag, X } from 'lucide-vue-next';
+import { VGithubIcon } from 'v-github-icon';
 import { ref, computed } from 'vue';
 
 const userIpt = ref('');
