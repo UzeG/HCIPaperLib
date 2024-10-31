@@ -1,7 +1,7 @@
 <template>
   <div class=" py-2 h-full flex flex-col items-center bg-gray-100">
     <!-- GitHub logo -->
-    <VGithubIcon url="https://github.com/UzeG/HCIPaperLib"/>
+    <VGithubIcon url="https://github.com/UzeG/HCIPaperLib" />
     <!-- 搜索框 -->
     <div class=" w-96">
       <div class=" w-full flex items-center">
@@ -13,7 +13,8 @@
             @click="userIpt = ''" />
         </div>
         <div class=" relative">
-          <CircleHelp class=" text-gray-400 cursor-pointer hover:text-blue-500 transition-all" @click="showHelp = !showHelp" />
+          <CircleHelp class=" text-gray-400 cursor-pointer hover:text-blue-500 transition-all"
+            @click="showHelp = !showHelp" />
           <div v-if="showHelp"
             class=" absolute -right-1 translate-x-full top-0 px-4 py-2 min-w-40 bg-white rounded-lg border border-gray-400 text-sm shadow-lg text-gray-500 select-none">
             查询规则：
@@ -84,6 +85,7 @@
 <script setup lang="ts">
 import CHILBWData from '@/assets/chi-lbw-2024-a-2.json';
 import { Search, CircleHelp, Box, CheckCheck, Sparkle, Tag, X } from 'lucide-vue-next';
+// @ts-ignore
 import { VGithubIcon } from 'v-github-icon';
 import { ref, computed } from 'vue';
 
@@ -92,9 +94,11 @@ const userIpt = ref('');
 const CHILBWJoinedStr = ref<string[]>([]);
 CHILBWData.forEach(item => {
   CHILBWJoinedStr.value.push(
-    ''.concat(
-      item.eTitle, item.title, item.innovation, item.method, item.solved, item.key.join('')
-    )
+    ''
+      .concat(
+        item.eTitle, item.title, item.innovation, item.method, item.solved, item.key.join('')
+      )
+      .toLowerCase()
   )
 });
 
