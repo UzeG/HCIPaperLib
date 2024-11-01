@@ -127,7 +127,7 @@
 
 <script setup lang="ts">
 import CHILBWData from '@/assets/chi-lbw-2024-a-2.json';
-import { Search, CircleHelp, Box, CheckCheck, Sparkle, Tag, X, CurlyBraces } from 'lucide-vue-next';
+import { Search, CircleHelp, Box, CheckCheck, Sparkle, Tag, X } from 'lucide-vue-next';
 // @ts-ignore
 import { VGithubIcon } from 'v-github-icon';
 import { ref } from 'vue';
