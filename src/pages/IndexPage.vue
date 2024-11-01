@@ -2,7 +2,7 @@
   <div class="page bg-gray-100">
     <VGithubIcon url="https://github.com/UzeG/HCIPaperLib" class=" hidden lg:block" />
     <div class=" w-full h-full flex justify-center">
-      <div class=" h-full py-2 w-11/12 lg:w-5/6 flex flex-col relative">
+      <div class=" h-full py-2 w-11/12 lg:w-[48rem] flex flex-col relative">
         <!-- GitHub logo -->
         <!-- 搜索框 -->
         <div class=" w-full flex items-center relative">
@@ -144,7 +144,7 @@ CHILBWData.forEach(item => {
         item.eTitle, item.title, item.innovation, item.method, item.solved, item.key.join('')
       )
       .toLowerCase()
-  )
+  );
 });
 
 // function isChineseOrEnglish(char: string) {
@@ -256,7 +256,7 @@ const executeSearch = (kws: string[]) => {
   CHILBWJoinedStr.value.forEach((item, index) => {
     let flag = true;
     for (const kw of kws) {
-      if (!item.includes(kw)) {
+      if (!item.includes(kw.toLowerCase())) {
         flag = false;
         break;
       }

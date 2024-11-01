@@ -1,1 +1,1 @@
-{"root":["./src/main.ts","./src/vite-env.d.ts","./src/router/index.ts","./src/app.vue","./src/pages/indexpage.vue"],"errors":true,"version":"5.6.3"}
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/router/index.ts","./src/app.vue","./src/pages/indexpage.vue"],"version":"5.6.3"}
